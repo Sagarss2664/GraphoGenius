@@ -1,120 +1,7 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import './Home.css';
-
-// const Home = () => {
-//   return (
-//     <div className="home-container">
-//       <div className="hero-section">
-//         <div className="hero-content">
-//           <h1 className="hero-title">
-//             Handwritten Pattern Prediction System
-//           </h1>
-//           <p className="hero-subtitle">
-//             Advanced AI-powered analysis for handwriting patterns and behavioral insights
-//           </p>
-//           <p className="hero-description">
-//             Our cutting-edge system combines graphology, psychology, and machine learning 
-//             to provide accurate handwriting analysis for hiring, psychological assessment, 
-//             and personal development.
-//           </p>
-//         </div>
-//       </div>
-
-//       <div className="features-section">
-//         <div className="container">
-//           <h2 className="section-title">Key Features</h2>
-//           <div className="features-grid">
-//             <div className="feature-card">
-//               <div className="feature-icon">✍️</div>
-//               <h3>Handwriting Analysis</h3>
-//               <p>Advanced pattern recognition and analysis of handwriting samples</p>
-//             </div>
-//             <div className="feature-card">
-//               <div className="feature-icon">🧠</div>
-//               <h3>Psychological Insights</h3>
-//               <p>Professional psychological assessment based on handwriting patterns</p>
-//             </div>
-//             <div className="feature-card">
-//               <div className="feature-icon">👥</div>
-//               <h3>Hiring Support</h3>
-//               <p>Assist hiring managers with candidate personality assessment</p>
-//             </div>
-//             <div className="feature-card">
-//               <div className="feature-icon">📊</div>
-//               <h3>Detailed Reports</h3>
-//               <p>Comprehensive reports with actionable insights and recommendations</p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="cta-section">
-//         <div className="container">
-//           <h2 className="cta-title">Get Started Today</h2>
-//           <p className="cta-description">
-//             Join our platform to access professional handwriting analysis tools
-//           </p>
-//           <div className="cta-buttons">
-//             <Link to="/register" className="btn btn-primary">
-//               Register Now
-//             </Link>
-//             <Link to="/user-login" className="btn btn-secondary">
-//               User Login
-//             </Link>
-//             <Link to="/admin-login" className="btn btn-admin">
-//               Admin Login
-//             </Link>
-//           </div>
-//         </div>
-//       </div>
-
-//       <div className="info-section">
-//         <div className="container">
-//           <div className="info-grid">
-//             <div className="info-card">
-//               <h3>For Professionals</h3>
-//               <ul>
-//                 <li>Graphologists</li>
-//                 <li>Hiring Managers</li>
-//                 <li>Psychiatrists</li>
-//                 <li>HR Professionals</li>
-//               </ul>
-//             </div>
-//             <div className="info-card">
-//               <h3>Secure Process</h3>
-//               <ul>
-//                 <li>Admin verification required</li>
-//                 <li>Secure login system</li>
-//                 <li>Email notifications</li>
-//                 <li>Activity tracking</li>
-//               </ul>
-//             </div>
-//             <div className="info-card">
-//               <h3>Easy Registration</h3>
-//               <ul>
-//                 <li>Simple sign-up process</li>
-//                 <li>Quick admin approval</li>
-//                 <li>Email credentials delivery</li>
-//                 <li>Instant access after approval</li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       <footer className="footer">
-//         <div className="container">
-//           <p>&copy; 2025 Handwritten Pattern Prediction System. All rights reserved.</p>
-//         </div>
-//       </footer>
-//     </div>
-//   );
-// };
-
-// export default Home;
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import handwritingSample from './image.jpg'; // Import the image
+
 import './Home.css';
 
 const Home = () => {
@@ -146,7 +33,6 @@ const Home = () => {
           <div className="nav-links">
             <Link to="/" className="nav-link active">Home</Link>
             <Link to="/about" className="nav-link">About</Link>
-            <Link to="/services" className="nav-link">Services</Link>
             <Link to="/contact" className="nav-link">Contact</Link>
             <Link to="/admin-login" className="nav-link">Admin</Link>
             <div className="auth-buttons">
@@ -158,7 +44,6 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* ===== HERO SECTION ===== */}
       <section className="hero-section">
         <div className="container">
           <div className="hero-content fade-in">
@@ -179,15 +64,21 @@ const Home = () => {
           </div>
           <div className="hero-image zoom-in">
             <div className="floating-card">
-              <div className="handwriting-sample"></div>
-              <div className="analysis-result">
+              <img 
+                src={handwritingSample} 
+                alt="Handwriting analysis sample" 
+                className="card-image" 
+                
+              />
+              {/* <div className="handwriting-sample"></div> */}
+              {/* <div className="analysis-result">
                 <h4>AI Analysis Result</h4>
                 <ul>
                   <li>✅ <strong>Confidence:</strong> 92%</li>
                   <li>🎨 <strong>Creativity:</strong> 85%</li>
                   <li>📊 <strong>Organization:</strong> 78%</li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -267,12 +158,12 @@ const Home = () => {
             {[
               { 
                 quote: "This tool transformed our hiring process with 90% accuracy!",
-                name: "Sarah Johnson", 
+                name: "ABCD", 
                 role: "HR Director @TechCorp" 
               },
               { 
                 quote: "As a psychologist, I rely on GraphoGenius for quick assessments.",
-                name: "Dr. Michael Chen", 
+                name: "PQRS", 
                 role: "Clinical Psychologist" 
               },
             ].map((testimonial, index) => (
@@ -341,8 +232,8 @@ const Home = () => {
             <div className="footer-col">
               <h3>Contact</h3>
               <ul>
-                <li>✉️ hello@graphogenius.com</li>
-                <li>📞 +1 (555) 123-4567</li>
+                <li>✉️ 01fe22bcs259@kletech.ac.in</li>
+                <li>📞 +91 8904646173</li>
               </ul>
             </div>
           </div>
