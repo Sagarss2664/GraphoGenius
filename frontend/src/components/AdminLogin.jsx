@@ -111,40 +111,12 @@ const AdminLogin = () => {
           <div className="auth-info">
             <div className="info-box admin-info">
               <h4>Admin Access</h4>
-              <p>This area is restricted to authorized administrators only.</p>
-              <div className="admin-features">
-                <h5>Admin Features:</h5>
-                <ul>
-                  <li>Review and approve user registrations</li>
-                  <li>Monitor user activities and login sessions</li>
-                  <li>Manage user accounts and permissions</li>
-                  <li>Send verification emails to users</li>
-                  <li>View system analytics and reports</li>
-                </ul>
-              </div>
+              <li>This area is restricted to authorized administrators only.</li>
+              <li>Ensure you have the correct credentials to access the admin dashboard.</li>
             </div>
           </div>
 
-          <div className="demo-credentials">
-            <h4>Demo Credentials</h4>
-            <div className="demo-accounts">
-              <div className="demo-account">
-                <strong>Admin 1:</strong><br />
-                Email: admin1@company.com<br />
-                Password: admin123
-              </div>
-              <div className="demo-account">
-                <strong>Admin 2:</strong><br />
-                Email: admin2@company.com<br />
-                Password: admin123
-              </div>
-              <div className="demo-account">
-                <strong>Admin 3:</strong><br />
-                Email: admin3@company.com<br />
-                Password: admin123
-              </div>
-            </div>
-          </div>
+      
         </div>
       </div>
     </div>
